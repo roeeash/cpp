@@ -4,23 +4,23 @@ using namespace std;
 
 int main()
 {
-    wchar_t wc = L'x';
-    char *pmb1 = (char *)malloc(sizeof(char));
-    char *pmb2 = NULL;
-    int ret_val;
+    wchar_t wc = L'p';
+    char *arg1 = (char *)malloc(sizeof(char));
+    char *arg2 = NULL;
+    int ret;
 
-    cout << "When pmb is not null" << endl;
-    ret_val = wctomb(pmb1, wc);
+    cout << "When wctomb gets non-null argument" << endl;
+    ret = wctomb(arg1, wc);
 
-    cout << "Return Value = " << ret_val << endl;
-    wcout << "Multibyte Character: " << pmb1 << endl
+    cout << "Return Value = " << ret << endl;
+    wcout << "Multibyte Character: " << arg1 << endl
           << endl;
 
-    cout << "When pmb is null" << endl;
-    ret_val = wctomb(pmb2, wc);
+    cout << "When wctomb gets null argument" << endl;
+    ret = wctomb(arg2, wc);
 
-    cout << "Return Value = " << ret_val << endl;
-    wcout << "Multibyte Character: " << pmb2;
+    cout << "Return Value = " << ret << endl;
+    wcout << "Multibyte Character: " << arg2;
 
     return (0);
 }
