@@ -34,9 +34,17 @@ public:
     {
         return complex(r - c.r, i - c.i);
     }
-    float operator|(int)
+    // find the n-th norm
+    float operator|(int p)
     {
-        return sqrt(r * r + i * i);
+        float real = pow(r, p);
+        float im = pow(i, p);
+        return pow((real + im), 1.0 / p);
+    }
+    complex operator*(complex c)
+    {
+        //(a+bi)*(x+yi) = (a*x-by+(b*x+a*y)*i)
+        return complex((r * c.r - i * c.i), (i * c.r + r * c.i));
     }
 };
 
@@ -45,7 +53,9 @@ int main()
     complex a(1, 2);
     complex b(3, 4);
     a.print_complex();
-    float n = a | 2;
+    float n = a | 3;
     cout << "a's norm is : " << n << endl;
+    complex c = a * b;
+    c.print_complex();
     return 0;
 }
