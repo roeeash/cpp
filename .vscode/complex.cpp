@@ -34,7 +34,7 @@ public:
     {
         return complex(r - c.r, i - c.i);
     }
-    // find the n-th norm
+    // find the p-th norm
     float operator|(int p)
     {
         float real = pow(r, p);
