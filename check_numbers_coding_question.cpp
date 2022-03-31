@@ -13,6 +13,8 @@ int main()
     cin >> temp;
     const int size = temp;
     int numbers[size];
+    int odd_counter = 0;
+
     // insert
     for (int i = 0; i < size; i++)
     {
@@ -26,11 +28,16 @@ int main()
         int number = numbers[i];
 
         if (number % 2 != 0)
+        {
             cout << "The number " << number << " is odd" << endl;
+            odd_counter++;
+        }
         else
             cout << "The number " << number << " is even" << endl;
         ;
     }
+    cout << "The amount of odd numbers is " << odd_counter << endl;
+
     // b. make them all odd
     for (int i = 0; i < size; i++)
     {
@@ -71,7 +78,7 @@ int main()
         for (int i = 0; i < size; i++)
         {
             int number = numbers[i];
-            numbers[i] = (17 * numbers[i]) % p;
+            numbers[i] = (17*(int(sqrt(p))+3) * numbers[i]) % int(sqrt(p));
             cout << "The number " << number << " has become " << numbers[i] << endl;
         }
     }
