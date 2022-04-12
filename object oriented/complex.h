@@ -4,6 +4,7 @@
 #include <cstdlib>
 #include <iostream>
 #include <cmath>
+#include <cstring>
 using namespace std;
 
 // class complex
@@ -22,11 +23,7 @@ public:
 
     // empty constructor
     complex() {}
-    void print_complex()
-    {
-        cout << "The real part is: " << r << endl;
-        cout << "The imaginary part is: " << i << endl;
-    }
+
     // addition
     complex operator+(complex c)
     {
@@ -48,6 +45,27 @@ public:
     {
         //(a+bi)*(x+yi) = (a*x-by+(b*x+a*y)*i)
         return complex((r * c.r - i * c.i), (i * c.r + r * c.i));
+    }
+    string to_string()
+    {
+        string str = "";
+        string real = "The real part is: ";
+        string im = "The imaginary part is: ";
+
+        real += std::to_string(r);
+        real += "\n";
+        im += std::to_string(i);
+        str = real + im;
+
+        return str;
+    }
+    float get_r()
+    {
+        return this->r;
+    }
+    float get_i()
+    {
+        return this->i;
     }
 };
 
