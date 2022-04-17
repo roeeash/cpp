@@ -1,0 +1,13 @@
+﻿  Sprite.cpp
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(58,49): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(60,70): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(60,49): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(62,53): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(80,13): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(81,13): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(87,17): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(91,17): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(94,17): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(97,17): warning C4244: '-=': conversion from 'double' to 'float', possible loss of data
+C:\Users\roee1\source\repos\Twitch\Twitch\Engine\Graphics\Sprite.cpp(106,12): warning C4244: '+=': conversion from 'double' to 'float', possible loss of data
+  Twitch.vcxproj -> C:\Users\roee1\source\repos\Twitch\Debug\Twitch.exe
