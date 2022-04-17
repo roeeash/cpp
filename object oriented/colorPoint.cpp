@@ -17,23 +17,7 @@ public:
     }
     string to_string()
     {
-        string str = "";
-        string x_value = "(";
-        string y_value = "(";
-
-        x_value += std::to_string(x.get_r());
-        x_value += ",";
-        x_value += std::to_string(x.get_i());
-        x_value += ")";
-
-        y_value += std::to_string(y.get_r());
-        y_value += ",";
-        y_value += std::to_string(y.get_i());
-        y_value += ")";
-
-        str = x_value + " , " + y_value + " " + color;
-
-        return str;
+        return Point::to_string() + " , color : " + this->color;
     }
 };
 
