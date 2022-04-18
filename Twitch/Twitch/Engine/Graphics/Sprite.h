@@ -2,6 +2,7 @@
 #define TWITCH_SPRITE
 
 #include "GLFW/glfw3.h"
+#include "../Math/Vector3.h"
 #include "Texture.h"
 #include <iostream>
 #include <string>
@@ -13,13 +14,13 @@ class Sprite
 public:
 	Sprite();
 	Sprite(string imagePath);
-	Sprite(string imagePath, float xPos, float yPos);
+	Sprite(string imagePath, Vector3 v);
 	
 	void Update();
 	void Render();
 
-	void MoveTo(float x, float y);
-	void MoveBy(float x,float y);
+	void MoveTo(Vector3 v);
+	void MoveBy(Vector3 v);
 	void RotateTo(float x);
 	void RotateBy(float x);
 	void speedTo(float x);
@@ -32,18 +33,21 @@ public:
 
 
 	void setScale(float x);
-	void setScale(float x, float y);
+	void setScale(Vector3 v);
+	Vector3* getPos();
+	float* getRot();
+	Vector3* getScale();
+	Vector3* getSize();
 
 private:
 	//Texture
 	Texture texture;
 	// x and y position
-	float xPos;
-	float yPos;
+	Vector3 pos;
 	float rot;
-	float xScale;
-	float yScale;
+	Vector3 scale;
 	float speed;
+	Vector3 size;
 
 };
 

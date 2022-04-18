@@ -9,7 +9,7 @@ using namespace std;
 int Engine :: SCREEN_WIDTH = 1024;
 int Engine:: SCREEN_HEIGHT = 768;
 GLFWwindow* Engine:: window = NULL;
-double Engine::dt = 0;
+float Engine::dt = 0;
 
 //constructor
 Engine::Engine() {
@@ -89,7 +89,7 @@ bool Engine::Initiallize(char* windowTitle) {
 	glBlendFunc(GL_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
 	//set lastTime to end of last action
-	lastTime = glfwGetTime();
+	lastTime = (float)glfwGetTime();
 	
 	return true;
 
@@ -98,7 +98,7 @@ bool Engine::Initiallize(char* windowTitle) {
 void Engine::Update() {
 	
 	//calculate delta time
-	double now = glfwGetTime();
+	float now = (float)glfwGetTime();
 	dt = (now - lastTime);
 	lastTime = now;
 
@@ -122,6 +122,6 @@ void Engine::EndRender() {
 	glfwSwapBuffers(window);
 }
 
-double Engine::getDT() {
-	return dt;
+float Engine::getDT() {
+	return(float) dt;
 }

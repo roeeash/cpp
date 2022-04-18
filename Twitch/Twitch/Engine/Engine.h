@@ -8,7 +8,7 @@ class Engine {
 public:
 	static int SCREEN_WIDTH;
 	static int SCREEN_HEIGHT;
-	static double getDT();
+	static float getDT();
 
 	Engine();
 	~Engine();
@@ -21,9 +21,9 @@ public:
 private:
 	static GLFWwindow* window;
 	// delta time = the difference in time
-	static double dt;
+	static float dt;
 	//lastTime = last time measured
-	double lastTime;
+	float lastTime;
 
 };
 #endif

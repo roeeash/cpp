@@ -4,6 +4,8 @@
 #include "Engine/Graphics/Sprite.h"
 #include "Engine/IO/Mouse.h"
 #include "Engine/IO/Keyboard.h"
+#include "Engine/Math/Vector3.h"
+#include "FlappyTwitch/Flapper.h"
 #include <iostream>
 
 int main()
@@ -13,13 +15,15 @@ int main()
     char title[] = "Twitch";
     engine.Initiallize(title);
 
-    Sprite testSprite = Sprite("Assets/Art/Biplane.png", 0, 0);
+    Sprite testSprite = Sprite("Assets/Art/Biplane.png",Vector3(100,100,0));
     testSprite.setScale(0.25f);
+    Flapper player(testSprite);
 
     while (true) {
         //update engine and sprite
         engine.Update();
         testSprite.Update();
+        //player.Update();
         //render
         
         //testSprite.MoveTo((float)Mouse::getMouseX(), (float)Mouse::getMouseY());
@@ -33,10 +37,7 @@ int main()
         if (Mouse::ButtonUp(GLFW_MOUSE_BUTTON_RIGHT)) {
             testSprite.RotateBy(-100);
         }
-        //if left click was pressed
-        if (Mouse::ButtonUp(GLFW_MOUSE_BUTTON_RIGHT)) {
-            testSprite.RotateBy(-100);
-        }
+       
         //if middle click was pressed
         if (Mouse::Button(GLFW_MOUSE_BUTTON_MIDDLE)) {
             testSprite.RotateBy(-100);
@@ -52,7 +53,7 @@ int main()
         }
         //if middle click was pressed
         if (Keyboard::Key(GLFW_KEY_A)) {
-            testSprite.MoveLeft();
+            player.GetSprite().MoveLeft();
         }
         //if middle click was pressed
         if (Keyboard::Key(GLFW_KEY_D)) {
@@ -61,6 +62,7 @@ int main()
 
         engine.BeginRender();
         testSprite.Render();
+        //player.Render();
         engine.EndRender();
     }
     return 0;
