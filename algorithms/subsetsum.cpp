@@ -38,7 +38,7 @@ bool subsetSumIterative(vector<int> const &A, int k)
 }
 
 // Returns true if there exists a subsequence of `A[0…n]` with the given sum
-bool subsetSum(vector<int> const &A, int n, int k, map<string, bool> &lookup)
+bool subsetSum(vector<int> const &A, int n, int k, map<string, bool> &mapping)
 {
     // return true if the sum becomes 0 (subset found)
     if (k == 0)
@@ -54,12 +54,12 @@ bool subsetSum(vector<int> const &A, int n, int k, map<string, bool> &lookup)
 
     string key = to_string(n) + "|" + to_string(k);
 
-    if (lookup.find(key) == lookup.end())
+    if (mapping.find(key) == mapping.end())
     {
 
-        bool include = subsetSum(A, n - 1, k - A[n], lookup);
+        bool include = subsetSum(A, n - 1, k - A[n], mapping);
 
-        bool exclude = subsetSum(A, n - 1, k, lookup);
+        bool exclude = subsetSum(A, n - 1, k, mapping);
 
         lookup[key] = include || exclude;
     }
