@@ -2,59 +2,23 @@
 #define POINT_H
 
 #include "complex.h"
-#include <cstring>
-
 using namespace std;
 class Point
 {
+
+public:
+    Point();
+    Point(complex x, complex y);
+    // point as 4 ints
+    Point(int a, int b, int c, int d);
+    Point operator+(Point other);
+    Point operator-(Point other);
+    string to_string();
+
 private:
     complex x, y;
-    // default constructor
-public:
-    Point(complex x, complex y)
-    {
-        this->x = x;
-        this->y = y;
-    }
-    // point as 4 ints
-    Point(int a, int b, int c, int d)
-    {
-        this->x = complex(a, b);
-        this->y = complex(c, d);
-    }
-    // empty contructor
-    Point()
-    {
-    }
-
-    Point operator+(Point other)
-    {
-        return Point(x + other.x, y + other.y);
-    }
-    Point operator-(Point other)
-    {
-        return Point(x - other.x, y - other.y);
-    }
-    string to_string()
-    {
-        string str = "";
-        string x_value = "(";
-        string y_value = "(";
-
-        x_value += std::to_string(x.get_r());
-        x_value += ",";
-        x_value += std::to_string(x.get_i());
-        x_value += ")";
-
-        y_value += std::to_string(y.get_r());
-        y_value += ",";
-        y_value += std::to_string(y.get_i());
-        y_value += ")";
-
-        str = x_value + " , " + y_value;
-
-        return str;
-    }
 };
+
+
 
 #endif
