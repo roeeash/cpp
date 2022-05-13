@@ -47,6 +47,7 @@
     "typeinfo": "cpp",
     "complex": "cpp",
     "cstring": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "span": "cpp"
   }
 }
