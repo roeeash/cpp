@@ -1,1 +1,2 @@
-scanf("%d%d",&n,&m);
+while (lastToSwap)
+    {
