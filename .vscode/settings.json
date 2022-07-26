@@ -48,6 +48,8 @@
     "complex": "cpp",
     "cstring": "cpp",
     "sstream": "cpp",
-    "span": "cpp"
+    "span": "cpp",
+    "list": "cpp",
+    "regex": "cpp"
   }
 }
