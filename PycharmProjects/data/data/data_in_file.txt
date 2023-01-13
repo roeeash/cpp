@@ -1,6 +1,0 @@
-The algorithm made the following predictions: []
-No prediction for Italy
-No prediction for Germany
-Predictions for England are between 50% and 60%
-No prediction for France
-No prediction for Spain
